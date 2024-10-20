@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patabang: Tutor Finding Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>PATABANG</h1>
+    <nav>
+        <a class="button" href="index.html">HOME</a>
+        <a class="button" href="#about">About Patabang</a>
+        <a class="button" href="mbti_test.html">MBTI Test</a>
+        <a class="button" href="register.html">Register</a>
+        <a class="button" href="show_tutors.php">Tutors Available</a>
+    </nav>
+</header>
+
+<h1>PATABANG: Tutor Finding Website</h1>
+<h3>Kun Nasasakitan, Dae Masupog magsabing PATABANG!</h3>
+
+<div class="about" id="about">
+    <h2>About Patabang</h2>
+    <p>Patabang started as a requirement in the Technopreneurship and Idea2Startup Bootcamp in 2023. It won the LGU-Naga Idea2Startup Pitching Challenge and was awarded funding. The project has continued to be developed ever since, and is now implemented in the College of Engineering and Architecture (CEA) of the University of Nueva Caceres (UNC) to help students find suitable tutors.</p>
+</div>
+
+<div class="container">
+    <h2>Select Your Tutor</h2>
+    <form id="tutor-selection-form" action="check_registration.php" method="post">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <input type="submit" value="Find Tutors">
+    </form>
+</div>
+
+<footer>
+    <p>Developed by Sheila Mae Albalate and Joshua Ocariz<br>
+       University of Nueva Caceres, Computer Engineering <br>
+       Adviser: Engr. Christine Bautista, Dean of CEA</p>
+</footer>
+
+</body>
+</html>

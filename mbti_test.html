@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Personality Test</title>
+    <link rel="stylesheet" href="css/mbti.css">
+</head>
+<body>
+    <header>
+        <h1>PATABANG: Tutor Finding Website</h1>
+        <!-- <h3><i>Kun Nasasakitan, Dae Masupog magsabing PATABANG!</i></h3> -->
+    <nav>
+        <a class="button" href="index.html">HOME</a>
+        <a class="button" href="#about">About Patabang</a>
+        <a class="button" href="mbti_test.html">MBTI Test</a>
+        <a class="button" href="register.html">Register</a>
+        <a class="button" href="show_tutors.php">Tutors Available</a>
+    </nav>
+    </header>
+
+    <div class="container">
+        <form action="process_mbti.php" method="post">
+            <h2>About You</h2>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </p> <br><br>
+            
+            <!-- Extraversion vs Introversion (3 questions) -->
+            <div class="question">
+                <label>1. Do you enjoy being the center of attention?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="ei1" value="E" required>
+                    <input type="radio" name="ei1" value="E" required>
+                    <input type="radio" name="ei1" value="E" required>
+                    <input type="radio" name="ei1" value="I" required>
+                    <input type="radio" name="ei1" value="I" required>
+                    <input type="radio" name="ei1" value="I" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>2. Do you prefer spending time with a group of people rather than alone?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="ei2" value="E" required>
+                    <input type="radio" name="ei2" value="E" required>
+                    <input type="radio" name="ei2" value="E" required>
+                    <input type="radio" name="ei2" value="I" required>
+                    <input type="radio" name="ei2" value="I" required>
+                    <input type="radio" name="ei2" value="I" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>3. Are you energized by social interaction or drained by it?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="ei3" value="E" required>
+                    <input type="radio" name="ei3" value="E" required>
+                    <input type="radio" name="ei3" value="E" required>
+                    <input type="radio" name="ei3" value="I" required>
+                    <input type="radio" name="ei3" value="I" required>
+                    <input type="radio" name="ei3" value="I" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+
+            <!-- Sensing vs Intuition (4 questions) -->
+            <div class="question">
+                <label>4. Do you focus more on facts and details than big ideas and concepts?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="sn1" value="S" required>
+                    <input type="radio" name="sn1" value="S" required>
+                    <input type="radio" name="sn1" value="S" required>
+                    <input type="radio" name="sn1" value="N" required>
+                    <input type="radio" name="sn1" value="N" required>
+                    <input type="radio" name="sn1" value="N" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>5. Do you rely more on what you see and know, or do you prefer possibilities and imagination?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="sn2" value="S" required>
+                    <input type="radio" name="sn2" value="S" required>
+                    <input type="radio" name="sn2" value="S" required>
+                    <input type="radio" name="sn2" value="N" required>
+                    <input type="radio" name="sn2" value="N" required>
+                    <input type="radio" name="sn2" value="N" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>6. Do you prefer to understand the immediate and concrete over theoretical possibilities?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="sn3" value="S" required>
+                    <input type="radio" name="sn3" value="S" required>
+                    <input type="radio" name="sn3" value="S" required>
+                    <input type="radio" name="sn3" value="N" required>
+                    <input type="radio" name="sn3" value="N" required>
+                    <input type="radio" name="sn3" value="N" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>7. Do you focus on practical applications more than abstract theory?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="sn4" value="S" required>
+                    <input type="radio" name="sn4" value="S" required>
+                    <input type="radio" name="sn4" value="S" required>
+                    <input type="radio" name="sn4" value="N" required>
+                    <input type="radio" name="sn4" value="N" required>
+                    <input type="radio" name="sn4" value="N" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+
+            <!-- Thinking vs Feeling (4 questions) -->
+            <div class="question">
+                <label>8. When making decisions, do you rely more on objective logic than personal feelings?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="tf1" value="T" required>
+                    <input type="radio" name="tf1" value="T" required>
+                    <input type="radio" name="tf1" value="T" required>
+                    <input type="radio" name="tf1" value="F" required>
+                    <input type="radio" name="tf1" value="F" required>
+                    <input type="radio" name="tf1" value="F" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>9. Do you base decisions on facts and logic rather than on people and feelings?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="tf2" value="T" required>
+                    <input type="radio" name="tf2" value="T" required>
+                    <input type="radio" name="tf2" value="T" required>
+                    <input type="radio" name="tf2" value="F" required>
+                    <input type="radio" name="tf2" value="F" required>
+                    <input type="radio" name="tf2" value="F" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>10. Do you value fairness and justice over personal relationships in decision making?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="tf3" value="T" required>
+                    <input type="radio" name="tf3" value="T" required>
+                    <input type="radio" name="tf3" value="T" required>
+                    <input type="radio" name="tf3" value="F" required>
+                    <input type="radio" name="tf3" value="F" required>
+                    <input type="radio" name="tf3" value="F" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>11. Are you more concerned with achieving results than maintaining harmony?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="tf4" value="T" required>
+                    <input type="radio" name="tf4" value="T" required>
+                    <input type="radio" name="tf4" value="T" required>
+                    <input type="radio" name="tf4" value="F" required>
+                    <input type="radio" name="tf4" value="F" required>
+                    <input type="radio" name="tf4" value="F" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+
+            <!-- Judging vs Perceiving (4 questions) -->
+            <div class="question">
+                <label>12. Do you prefer having things settled and planned in advance?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="jp1" value="J" required>
+                    <input type="radio" name="jp1" value="J" required>
+                    <input type="radio" name="jp1" value="J" required>
+                    <input type="radio" name="jp1" value="P" required>
+                    <input type="radio" name="jp1" value="P" required>
+                    <input type="radio" name="jp1" value="P" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>13. Do you find comfort in routine and predictability?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="jp2" value="J" required>
+                    <input type="radio" name="jp2" value="J" required>
+                    <input type="radio" name="jp2" value="J" required>
+                    <input type="radio" name="jp2" value="P" required>
+                    <input type="radio" name="jp2" value="P" required>
+                    <input type="radio" name="jp2" value="P" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>14. Do you prefer flexibility over structure when planning activities?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="jp3" value="J" required>
+                    <input type="radio" name="jp3" value="J" required>
+                    <input type="radio" name="jp3" value="J" required>
+                    <input type="radio" name="jp3" value="P" required>
+                    <input type="radio" name="jp3" value="P" required>
+                    <input type="radio" name="jp3" value="P" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+            <div class="question">
+                <label>15. Are you more spontaneous than methodical in your approach to daily tasks?</label><br>
+                <div class="likert">
+                    <label>Strongly Disagree</label>
+                    <input type="radio" name="jp4" value="J" required>
+                    <input type="radio" name="jp4" value="J" required>
+                    <input type="radio" name="jp4" value="J" required>
+                    <input type="radio" name="jp4" value="P" required>
+                    <input type="radio" name="jp4" value="P" required>
+                    <input type="radio" name="jp4" value="P" required>
+                    <label>Strongly Agree</label>
+                </div>
+            </div><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>Developed by Sheila Mae Albalate and Joshua Ocariz<br>
+           University of Nueva Caceres, Computer Engineering <br>
+           Adviser: Engr. Christine Bautista, Dean of CEA</p>
+    </footer>
+</body>
+</html>
